@@ -22,7 +22,7 @@ router.get("/", upload.none(), function(request, response) {
 router.delete("/", upload.none(), function(request, response) {
     const db = low(new FileSync('db.json'));// получение БД
     let transactions = db.get("transactions");// получение всех транзакций
-    let { id } = request.body;// получение id из тела запроса
+    let  id  = request.query.id;// получение id из тела запроса
     let removingTransaction = transactions.find({id});// нахождение удаляемой транзакции
     if(removingTransaction.value()){// если значение транзакции существует...
         transactions.remove({id}).write();// удалить транзакцию и записать это в БД

@@ -75,4 +75,15 @@ class Entity {
       }
     })
   }
+  static removeTransaction(data, callback ) {
+    createRequest({
+      url: this.URL + data,
+      method: 'DELETE',
+      responseType: 'json',
+      callback: (err, response) => {
+        callback(err, response);
+      }
+    })
+  }
+
 }

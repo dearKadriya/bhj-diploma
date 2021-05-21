@@ -43,17 +43,18 @@ class TransactionsPage {
   registerEvents() {
     const removeAccount = this.element.querySelector('.remove-account');
     removeAccount.onclick = () => {this.removeAccount()}
-    const transactionRemove = this.element.querySelectorAll('.transaction__remove');
+    // const transactionRemove = this.element.querySelectorAll('.transaction__remove');
+    // console.log(transactionRemove)
 
     //
     // transactionRemove.onclick = () =>{
     //   const dataId = transactionRemove.getAttribute('data-id')
     //   this.removeTransaction(dataId)}
     // console.log('perfecto')
-    transactionRemove.forEach(elem => elem.onclick = () => {
-      const data_id = elem.getAttribute('data-id');
-      this.removeTransaction(data_id)
-    })
+    // transactionRemove.forEach(elem => elem.onclick = () => {
+    //   const data_id = elem.getAttribute('data-id');
+    //   this.removeTransaction(data_id)
+    // })
 
 
 
@@ -93,9 +94,10 @@ class TransactionsPage {
     console.log('wtf')
     let warning = confirm('Вы действительно хотите удалить эту транзакцию?')
     alert(warning)
-    Transaction.remove(id, (err, response) => {
+    id = "?id=" + id
+    Transaction.removeTransaction(id, (err, response) => {
       if(err === null) {
-
+      App.update();
       }
     })
   }
@@ -196,9 +198,14 @@ class TransactionsPage {
       content.innerHTML = '';
       data.forEach(item => {const html = this.getTransactionHTML(item)
             content.insertAdjacentHTML('beforeend', html)
-          }
-      )
+          })
     }
+    const transactionRemove = this.element.querySelectorAll('.transaction__remove');
+    console.log(transactionRemove)
+    transactionRemove.forEach(elem => elem.onclick = () => {
+      const data_id = elem.getAttribute('data-id');
+      this.removeTransaction(data_id)
+    })
 
   }
 }

@@ -24,11 +24,6 @@
       "name": "первый",
       "user_id": "sktwi10nrkou4h47r",
       "id": "sktwi17v5kowsoqs2"
-    },
-    {
-      "name": "второй",
-      "user_id": "sktwi10nrkou4h47r",
-      "id": "sktwi17vqkowspcr8"
     }
   ],
   "transactions": [
@@ -96,31 +91,13 @@
       "user_id": "1"
     },
     {
-      "id": "sktwi17v9kowsowf5",
+      "id": "sktwi17z2kowtf6l7",
       "type": "income",
-      "name": "1",
-      "sum": 100,
+      "name": "ДОХОД",
+      "sum": 1000,
       "account_id": "sktwi17v5kowsoqs2",
       "user_id": "sktwi10nrkou4h47r",
-      "created_at": "2021-05-20T11:12:46.624Z"
-    },
-    {
-      "id": "sktwi17vckowsp7op",
-      "type": "income",
-      "name": "второй",
-      "sum": 200,
-      "account_id": "sktwi17v5kowsoqs2",
-      "user_id": "sktwi10nrkou4h47r",
-      "created_at": "2021-05-20T11:13:01.224Z"
-    },
-    {
-      "id": "sktwi17vtkowspmvk",
-      "type": "income",
-      "name": "первый",
-      "sum": 100,
-      "account_id": "sktwi17vqkowspcr8",
-      "user_id": "sktwi10nrkou4h47r",
-      "created_at": "2021-05-20T11:13:20.911Z"
+      "created_at": "2021-05-20T11:33:12.858Z"
     }
   ]
 }
